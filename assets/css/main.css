@@ -28,6 +28,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
   }
   .overlay {
     z-index: 1;
@@ -40,6 +42,7 @@
     height: 100vw;
     color: rgb(255, 255, 255);
     font-size: 2rem;
+    cursor: pointer;
   }
   .no-hover {
     display: block;
@@ -61,31 +64,52 @@
     place-content: center;
     text-align: center;
     color: rgb(255, 255, 255);
+    padding: 20px;
   }
   .text-content h1 {
     font-size: 3rem;
     font-weight: 800;
+    margin-bottom: 20px;
+  }
+  .info-section {
+    margin: 20px 0;
+  }
+  .info-section p {
+    margin: 8px 0;
+    line-height: 1.4;
+  }
+  .divider {
+    font-size: 1.5rem;
+    color: #666;
+    margin: 25px 0;
   }
   .text-content p {
-    padding-top: 30px;
-    padding-right: 10px;
-    padding-bottom: 31px;
-    padding-left: 10px;
-    font-size: 1.7rem;
+    padding: 5px 10px;
+    font-size: 1.1rem;
     font-weight: 500;
-    line-height: 0.0;
     color: rgb(192, 192, 192);
-    display: flex;
   }
   .text-content a {
-    padding-top: 30px;
-    padding-right: 10px;
-    padding-bottom: 31px;
-    padding-left: 10px;
-    font-size: 1.3rem;
-    line-height: 0.0;
+    padding: 8px 12px;
+    font-size: 1.1rem;
     color: #cccccc;
-    display: flex;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+  }
+  .text-content a:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+  }
+  .contact-info {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+  }
+  .contact-info p {
+    font-size: 0.9rem;
+    color: #888;
   }
   #overlay-toggle:checked ~ .overlay {
     animation-fill-mode: forwards;
@@ -105,6 +129,21 @@
     }
     .no-hover {
       display: none;
+    }
+  }
+  @media (max-width: 768px) {
+    .text-content h1 {
+      font-size: 2.2rem;
+    }
+    .text-content p {
+      font-size: 1rem;
+    }
+    .text-content a {
+      font-size: 1rem;
+    }
+    .socials {
+      flex-direction: column;
+      gap: 10px;
     }
   }
   @keyframes fade{
